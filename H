@@ -1,0 +1,27 @@
+local loopkick = true -- تفعيل loopkick تلقائيًا
+
+-- الانتقال إلى السيف والريست
+while true do -- حلقة لا نهائية
+    if loopkick then
+        local player = game.Players.LocalPlayer
+        if player.Name == "targzll1" then -- التحقق من اسم اللاعب
+            local character = player.Character
+            if character and character:FindFirstChild("HumanoidRootPart") and character:FindFirstChild("Humanoid") then
+                -- البحث عن أي سيف في Workspace
+                for _, tool in ipairs(game.Workspace:GetDescendants()) do
+                    if tool:IsA("Tool") and tool:FindFirstChild("Handle") then
+                        -- الانتقال إلى السيف
+                        character.HumanoidRootPart.CFrame = tool.Handle.CFrame
+                        
+                        -- انتظار 0.2 ثانية قبل تعيين الصحة إلى 0
+                        task.wait(0.2)
+                        character.Humanoid.Health = 0
+                        
+                        break -- الخروج من الحلقة بعد الانتقال إلى سيف واحد
+                    end
+                end
+            end
+        end
+    end
+    task.wait(0.1) -- انتظار بسيط لتجنب تجميد اللعبة
+end
